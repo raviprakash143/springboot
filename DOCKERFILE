@@ -1,6 +1,0 @@
-FROM java:8
-VOLUME /tmp
-ADD target/spring-aws-0.0.1-SNAPSHOT.jar spring-aws.jar
-RUN sh -c 'touch /spring-aws.jar'
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","spring-aws.jar"]
-EXPOSE 8081
